@@ -1,6 +1,6 @@
 package com.trebnikau.spring.company.rest.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "employees")
@@ -14,7 +14,7 @@ public class Employee {
     private String userName;
     @Column(name = "department")
     private String department;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "detail_id")
     private Detail detail;
 

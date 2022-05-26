@@ -1,7 +1,6 @@
 package com.trebnikau.spring.company.rest.configuration;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

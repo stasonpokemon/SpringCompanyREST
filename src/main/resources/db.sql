@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS my_company;
 CREATE DATABASE my_company;
 use my_company;
 
@@ -27,6 +28,9 @@ INSERT INTO details(name, surname, patronymic, age, date_of_birthday)
 INSERT INTO employees(user_name, department, detail_id)
     VALUE ('stason420','IT',1);
 INSERT INTO details(name, surname, patronymic, age, date_of_birthday)
-    VALUE ('Anastasia','Demeshenko','Urievna',21,'04.06.2001');
+    VALUE ('Anastasia','Demeshenko','Urievna',21,'04.05.2001');
 INSERT INTO employees(user_name, department, detail_id)
     VALUE ('nestydem','Design',2);
+
+SELECT * FROM employees;
+SELECT * FROM details;

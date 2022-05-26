@@ -38,8 +38,9 @@ public class DetailDAOImpl implements DetailDAO{
     @Override
     public void deleteDetailById(int detailId) {
         Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("delete from Detail where id = :detailId");
-        query.setParameter("detailId", detailId);
-        query.executeUpdate();
+//        Query query = session.createQuery("delete from Detail where id = :detailId");
+//        query.setParameter("detailId", detailId);
+//        query.executeUpdate();
+        session.delete(findDetailById(detailId));
     }
 }

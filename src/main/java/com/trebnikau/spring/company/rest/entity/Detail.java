@@ -1,6 +1,6 @@
 package com.trebnikau.spring.company.rest.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "details")
@@ -20,13 +20,13 @@ public class Detail {
     private int age;
     @Column(name = "date_of_birthday")
     private String dateOfBirthday;
-
-    public Detail() {
-    }
+    @OneToOne(mappedBy = "detail", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Employee employee;
 
     public int getId() {
         return id;
     }
+
 
     public void setId(int id) {
         this.id = id;
